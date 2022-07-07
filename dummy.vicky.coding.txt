@@ -1,0 +1,24 @@
+$(document).(readyfunction(){
+    $('.item-active').click(function(){
+         const value=$(this).attr('data-filter');
+         if(value == 'all'){
+             $('.item-active')..show('1000');
+
+         }
+         else{
+             $('.item-active').not('.'+value).hide('1000');
+             $('.item-active').filter('.'+value).show('1000');      
+               }
+    })
+    $('.list')
+})
+
+
+
+
+function printMyName(...value){
+    "use strict";
+   return value ;
+
+}
++

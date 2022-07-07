@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<!-- <title>   complete  website in html css and javascript in hindi</title> -->
+    
+   <title>VStudio</title>
+   <link rel="stylesheet" type="text/css" href="2.css">
+  
+   </head> 
+  <body>
+    <header>  
+        <nav>
+            <div class="logo" >
+             Photo<span>pi</span>X
+            </div>
+            <div class="menu">
+                <a href="new.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="galary.html">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="icon">  
+              <i class="fa fa-search"></i>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+        <section class="h-text">
+          <i class="fa fa-camera-fill" id="camera"></i>
+        <h1> Capturing the movement that captivate your heart.</h1>
+        <input type="text" name="" placeholder="search here ..">
+        <button><i class="fa fa-search"></i></button>  
+        </section>
+      <section class="">  
+                  
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            
+        </section>  
+       </header> 
+       <section class="filter-gallery">
+         <div class="port-menu"> 
+           <ul>
+              <li class="filter-item active" data-filter="all" >All</li>
+              <li class="filter-item" data-filter="nature">Nature</li>
+              <li class="filter-item" data-filter="fashion">Fashion</li>
+              <li class="filter-item" data-filter="wedding">Wedding</li>
+           </ul>
+         </div>
+         <div class="port"> 
+           <div class="port-item nature" data-item="nature">
+            <img src="img/p1.jpg" width="100" height="100" alt="nature">
+           </div>
+           <div class="port-item fashion" data-item="fashion">
+            <img src="img/p2.jpg" width="100" height="100" alt="fashion">
+           </div>
+           <div class="port-item wedding" data-item="wedding">
+            <img src="img/p3.jpg" width="100" height="100" alt="wedding">
+           </div>
+           <div class="port-item nature" data-item="nature">
+            <img src="img/p4.jpg" width="100" height="100" alt="nature">
+           </div> 
+           <div class="port-item fashion" data-item="fashion">
+            <img src="img/p5.jpg" width="100" height="100" alt="fashion">
+           </div>
+           <div class="port-item wedding" data-item="wedding">
+            <img src="img/p6.jpg" width="100" height="100" alt="wedding">
+           </div>
+           <div class="port-item nature" data-item="nature">
+            <img src="img/p7.jpg" width="100" height="100" alt="nature">
+           </div> 
+           <div class="port-item fashion" data-item="fashion">
+            <img src="img/p8.jpg" width="100" height="100" alt="fashion">
+           </div>
+           <div class="port-item wedding" data-item="wedding">
+            <img src="img/p9.jpg" width="100" height="100" alt="wedding">
+           </div>
+         </div>
+          </section>
+           
+       
+          
+           <script type="text/javascript"> 
+          
+          const filterContainer = document.querySelector(".port-menu"),
+           portItems =document.querySelectorAll(".port-item");
+
+           filterContainer.addEventListener("click", (event) =>{
+             if(event.target.classList.contains("filter-item")){
+               filterContainer.querySelector(".active").classList.remove("active");
+         
+               event.target.classList.add("active");
+         
+               const filterValue =event.target.getAttribute("data-filter");
+               portItems.forEach((item) =>{
+                 if(item.classList.contains(filterValue) || filterValue==='all'){
+                  item.classList.remove("hide");
+                  
+                  item.classList.add("show");
+                 }
+               })
+             }
+           })
+           
+          
+  
+</script>
+
+ 
+   <section class="member"> 
+    <div class="member-info">
+      <h1><span>Information</span></h1>
+      <p>What our member says</p>
+    </div>
+    <div class="member-card">
+      <img src="img/member.png">
+      <p> 
+        From Rajasthan,doing gym is good for healthy life. it 
+        helps our body to fit. it release stress from our mind.From
+          Rajasthan,doing gym is good for healthy life. it helps our 
+        body to fit. it release stress from our mind.
+      </p>
+      <h2> *Maria Sharapova</h2>
+      <img src="img/icon1.png" width="100">
+      <img src="img/icon2.png" width="100">
+      <img src="img/icon3.png" width="100">
+      <img src="img/icon4.PNG" width="100">
+      
+    </div>
+  </section>  
+ 
+ </body>
+</html>
